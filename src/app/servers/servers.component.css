@@ -1,4 +1,8 @@
-.container {
-    background-color: red;
-    color: white;
+.addServerButton {
+    background-color: blue;
+    color :white
+}
+
+hr {
+    background-color: black;
 }

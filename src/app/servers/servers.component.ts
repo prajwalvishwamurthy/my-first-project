@@ -11,7 +11,7 @@ serverCreationStatus = 'No server was created!'
 constructor() {
   setTimeout(() => {
     this.allowNewServer = true;
-  }, 10000);
+  },  4000);
 }
 ngOnInit(): void {}
 onCreateServer() {

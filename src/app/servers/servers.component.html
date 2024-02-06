@@ -1,5 +1,8 @@
 <hr>
 <h3>This is the Servers component</h3>
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+<input type="text" class="form-control" [(ngModel)]="textInput"> <!-- this is two-data-binding here-->
+<!-- <p>{{textInput}}</p> -->
 <button class="addServerButton" (click)= "onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
 <p [innerText]="allowNewServer"></p>
 <p>{{serverCreationStatus}}</p>

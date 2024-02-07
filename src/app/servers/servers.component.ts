@@ -9,6 +9,8 @@ export class ServersComponent implements OnInit {
 allowNewServer = false;
 serverCreationStatus = 'No server was created!';
 textInput = 'TestServer';
+presentUserName = false;
+username = ' '
 constructor() {
   setTimeout(() => {
     this.allowNewServer = true;
@@ -21,4 +23,8 @@ onCreateServer() {
 onUpdateServerName(event : Event) {
   this.textInput = (<HTMLInputElement>event.target).value;
 } 
+
+updateUserName (event :Event) {
+  this.username = (<HTMLInputElement>event.target).value;
+}
 }

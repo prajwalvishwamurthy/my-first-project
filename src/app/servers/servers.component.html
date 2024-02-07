@@ -1,3 +1,4 @@
+
 <hr>
 <h3>This is the Servers component</h3>
 <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
@@ -6,3 +7,13 @@
 <button class="addServerButton" (click)= "onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
 <p [innerText]="allowNewServer"></p>
 <p>{{serverCreationStatus}}</p>
+
+
+
+<!-- Assignment Question -->
+<hr>
+<h3>This is assignment Answer</h3>
+<!-- 1. Add a Input field which updates a property('userName') via Two-way binding-->
+<input type="text" [(ngModel)]="username">
+<p>{{username}}</p>
+<button type="button" [disabled]="username == ' ' " (click)="username = ' ' ">Click here</button>

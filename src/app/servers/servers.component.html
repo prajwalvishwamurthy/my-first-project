@@ -22,4 +22,4 @@
 <h3>This is for the directives</h3>
 <input type="text" [(ngModel)] = 'updateDirective'>
 <p *ngIf="toggleButton">Server is created and the name of the server is {{updateDirective}}</p>
-<button type="button" [disabled] = "toggleButton || updateDirective === ''" (click)="onCreateServer()">click </button>
+<button type="button" [disabled] = "toggleButton" (click)="onCreateServer()">click </button>

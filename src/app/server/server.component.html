@@ -1,1 +1,1 @@
-<h3>Server id is {{serverId}} and {{serverStatus}} and the function is {{getServerStatus()}}</h3>
+<p [ngClass]="{online : serverStatus === 'online'}" [ngStyle] = '{backgroundColor : getColor()}' >Server id is {{serverId}} and {{serverStatus}} and the server is {{getServerStatus()}}</p>  <!-- here we use attribute style where we only adding and removing the element property-->

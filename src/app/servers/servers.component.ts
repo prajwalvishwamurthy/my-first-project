@@ -10,7 +10,10 @@ allowNewServer = false;
 serverCreationStatus = 'No server was created!';
 textInput = 'TestServer';
 presentUserName = false;
-username = ' '
+username = ' ';
+updateDirective = '';
+toggleButton = false;
+serversNames = ['TestServer', 'TestServer 2']
 constructor() {
   setTimeout(() => {
     this.allowNewServer = true;
@@ -18,6 +21,8 @@ constructor() {
 }
 ngOnInit(): void {}
 onCreateServer() {
+  this.toggleButton = true;
+  this.serversNames.push(this.textInput);
   this.serverCreationStatus ='Server was created' + " " + this.textInput !;
 }
 onUpdateServerName(event : Event) {
@@ -27,4 +32,5 @@ onUpdateServerName(event : Event) {
 updateUserName (event :Event) {
   this.username = (<HTMLInputElement>event.target).value;
 }
+
 }

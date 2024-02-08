@@ -1,10 +1,9 @@
-
 <hr>
 <h3>This is the Servers component</h3>
 <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
 <input type="text" class="form-control" [(ngModel)]="textInput"> <!-- this is two-data-binding here-->
 <!-- <p>{{textInput}}</p> -->
-<button class="addServerButton" (click)= "onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
+<button class="addServerButton" (click)="onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
 <p [innerText]="allowNewServer"></p>
 <p>{{serverCreationStatus}}</p>
 
@@ -20,10 +19,13 @@
 
 <hr>
 <h3>This is for the directives</h3>
-<input type="text" [(ngModel)] = 'updateDirective'>
-<p *ngIf="toggleButton"; else noServer>Server is created and the name of the server is {{updateDirective}}</p> <!-- here we are showing the ngIf template where we are having else part and taking a reference with '#' symbol -->
-<ng-template #noServer><p>no server was created</p></ng-template>
-<button type="button" [disabled] = "toggleButton" (click)="onCreateServer()">Click</button>
+<input type="text" [(ngModel)]='updateDirective'>
+<p *ngIf="toggleButton" ; else noServer>Server is created and the name of the server is {{updateDirective}}</p>
+<!-- here we are showing the ngIf template where we are having else part and taking a reference with '#' symbol -->
+<ng-template #noServer>
+     <p>no server was created</p>
+</ng-template>
+<button type="button" [disabled]="toggleButton" (click)="onCreateServer()">Click</button>
 
 <!-- 
     we can also add if statement for rendering the div 
@@ -34,3 +36,7 @@
             }
 
 -->
+
+<!-- ngFor Loop -->
+
+<app-server *ngFor="let server of serversNames"></app-server>

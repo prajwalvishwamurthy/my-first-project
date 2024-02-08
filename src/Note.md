@@ -10,3 +10,6 @@ Directives
 
     in console we can see the reference where the compiler as marked the changes to the DOM,
     
+    Types of directives: 
+        1. structural directives eg: *ngIf and * ngFor 
+        2. attributes directives eg: *ngStyle and *ngClass 

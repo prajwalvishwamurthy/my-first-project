@@ -21,5 +21,16 @@
 <hr>
 <h3>This is for the directives</h3>
 <input type="text" [(ngModel)] = 'updateDirective'>
-<p *ngIf="toggleButton">Server is created and the name of the server is {{updateDirective}}</p>
-<button type="button" [disabled] = "toggleButton" (click)="onCreateServer()">click </button>
+<p *ngIf="toggleButton"; else noServer>Server is created and the name of the server is {{updateDirective}}</p> <!-- here we are showing the ngIf template where we are having else part and taking a reference with '#' symbol -->
+<ng-template #noServer><p>no server was created</p></ng-template>
+<button type="button" [disabled] = "toggleButton" (click)="onCreateServer()">Click</button>
+
+<!-- 
+    we can also add if statement for rendering the div 
+
+    eg : @if (someCondition) 
+            {
+                 <p>Only visible if 'someCondition' is true</p>
+            }
+
+-->

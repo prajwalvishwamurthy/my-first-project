@@ -13,6 +13,8 @@ presentUserName = false;
 username = ' ';
 updateDirective = '';
 toggleButton = false;
+togglePassword = false;
+timeArray: any = []; 
 serversNames = ['TestServer', 'TestServer 2']
 constructor() {
   setTimeout(() => {
@@ -31,6 +33,11 @@ onUpdateServerName(event : Event) {
 
 updateUserName (event :Event) {
   this.username = (<HTMLInputElement>event.target).value;
+}
+
+onClickButton()  {
+  this.togglePassword = !this.togglePassword;
+  this.timeArray.push(this.timeArray.length + 1)
 }
 
 }

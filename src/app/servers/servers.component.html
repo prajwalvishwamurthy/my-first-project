@@ -40,3 +40,9 @@
 <!-- ngFor Loop -->
 
 <app-server *ngFor="let server of serversNames"></app-server>
+
+<!-- Assignment for the directives -->
+
+<button (click)="onClickButton()">Display Details</button>
+<p *ngIf = togglePassword>'SecretPassword = tuna'</p>
+<div class="white-text" *ngFor= 'let logItem of timeArray' [ngStyle]="{backgroundColor : logItem >=5 ? 'blue' : 'transparent'}" [ngClass]="{'white-text' : logItem >= 5}"> {{logItem}}</div>
